@@ -1,5 +1,4 @@
 buildscript {
-
     dependencies {
         // ASSUMES GRADLE 2.12 OR HIGHER. Use plugin version 0.7.5 with earlier gradle versions
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.4'
@@ -22,8 +21,6 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
-
-
 
 sourceSets {
     main {
@@ -64,13 +61,7 @@ protobuf {
                 outputSubDir = 'java/grpc'
             } }
         }
-
-        // In addition to all(), you may get the task collection by various
-        // criteria:
-
-        // (Java only) returns tasks for a sourceSet
         ofSourceSet('main')
-
     }
 }
 
